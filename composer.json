@@ -1,6 +1,7 @@
 {
     "name": "hpez/dotenvbackup",
     "description": "Backup generator for .env file",
+    "license": "MIT",
     "authors": [
         {
             "name": "Hassan Pezeshk",
