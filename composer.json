@@ -1,5 +1,5 @@
 {
-    "name": "hassan/dotenvbackup",
+    "name": "hpez/dotenvbackup",
     "description": "Backup generator for .env file",
     "authors": [
         {
