@@ -18,7 +18,6 @@ class DotEnvBackupServiceProvider extends ServiceProvider
         $this->app->booted(function () {
             $schedule = app(Schedule::class);
             $schedule->call(function () {
-                Log::info('hey');
                 $files = glob(base_path()."/.env.backup*");
                 $files = array_combine($files, array_map("filemtime", $files));
                 arsort($files);
@@ -26,7 +25,6 @@ class DotEnvBackupServiceProvider extends ServiceProvider
                 $currentEnv = base_path()."/.env";
 
                 $lastFileName = key($files);
-                Log::info($lastFileName);
                 if ($lastFileName) {
                     $tempFile = @tempnam('/temp', 'dotenv');
                     xdiff_file_diff($currentEnv, $lastFileName, $tempFile);
@@ -37,7 +35,6 @@ class DotEnvBackupServiceProvider extends ServiceProvider
 
                 if (strlen($contents))
                     copy($currentEnv, base_path()."/.env.backup-".now()->format('Y-m-d-H-i-s'));
-                Log::info("hello");
             })->cron(config('dotenvbackup.backup_interval'));
         });
     }
