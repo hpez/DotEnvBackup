@@ -20,7 +20,8 @@ Every minute: * * * * *
 Every five minutes: */5 * * * *
 Every hour at minute 0: 0 * * * *
 ```
-You can use websites like [this](https://crontab-generator.org/) or [this](https://crontab.guru/) to generate one.
+You can use websites like [this](https://crontab-generator.org/) or [this](https://crontab.guru/) to generate one.  
+You can also customize the backup directory in the config file which defaults to your projects root directory retrieved from laravel's ``base_path()`` function.
 
 ## Usage
 
