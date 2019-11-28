@@ -1,6 +1,13 @@
 {
     "name": "hpez/dotenvbackup",
     "description": "Backup generator for .env file",
+    "keywords": [
+        "laravel",
+        "package",
+        "env",
+        "dotenv",
+        "backup"
+    ],
     "license": "MIT",
     "authors": [
         {
